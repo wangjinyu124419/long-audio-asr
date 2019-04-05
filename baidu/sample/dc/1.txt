@@ -1,0 +1,3 @@
+{"results_recognition":["今天天气怎样？"],"origin_result":{"corpus_no":6669612541832805680,"err_no":0,"result":{"word":["今天天气怎样？"]},"sn":"DEC453AA-17EA-4246-A061-D20391BC60EB","voice_energy":26029.9433593750},"sn_start_time":"00:00.340","sn_end_time":"00:02.509"}
+
+
