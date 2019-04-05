@@ -1,0 +1,9 @@
+# Copyright 2018-Present Shanghai Yitu Technology Co., Ltd.
+# Licensed under the Apache License, Version 2.0
+
+JOB_STATUS_INIT  = 0
+JOB_STATUS_UPLOADING = 1
+JOB_STATUS_RECOGNISING = 2
+JOB_STATUS_RECOGNISE_COMPLETED = 3
+JOB_STATUS_RECOGNISE_FAILED = 4
+JOB_STATUS_NO_JOB_FOUND = 5

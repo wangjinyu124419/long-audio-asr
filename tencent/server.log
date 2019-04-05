@@ -1,0 +1,936 @@
+[D 190328 21:34:03.218 asyncio:65] Using selector: EpollSelector
+[I 190328 21:34:09.765 tornado.access:2246] 200 GET /?task_id=1030381_1553780049491 (127.0.0.1) 1.42ms
+[I 190328 21:34:11.800 tornado.access:2246] 200 GET /?task_id=1030634_1553780051528 (127.0.0.1) 0.45ms
+[I 190328 21:34:13.868 tornado.access:2246] 200 GET /?task_id=1031410_1553780053587 (127.0.0.1) 1.02ms
+[I 190328 21:34:15.828 tornado.access:2246] 200 GET /?task_id=1031605_1553780055584 (127.0.0.1) 0.52ms
+[D 190328 21:49:08.702 asyncio:65] Using selector: EpollSelector
+[I 190328 21:49:14.858 tornado.access:2246] 200 GET /?task_id=1031317_1553780954562 (127.0.0.1) 34.05ms
+[I 190328 21:49:48.898 tornado.access:2246] 200 GET /?task_id=1031317_1553780954562 (127.0.0.1) 1.44ms
+[D 190328 21:50:04.521 asyncio:65] Using selector: EpollSelector
+[D 190328 21:50:13.839 __main__:43] -------------------{}
+[I 190328 21:50:13.841 tornado.access:2246] 200 GET /?task_id=1031127_1553781013511 (127.0.0.1) 1.70ms
+[D 190328 21:50:47.852 __main__:43] -------------------{}
+[I 190328 21:50:47.853 tornado.access:2246] 200 GET /?task_id=1031127_1553781013511 (127.0.0.1) 1.37ms
+[D 190329 00:37:46.808 asyncio:65] Using selector: EpollSelector
+[E 190329 00:38:47.443 __main__:49] get_result_fail
+Traceback (most recent call last):
+  File "/home/wangjinyu/workproject/long_audio_asr/tencent/callback_url_blog.py", line 47, in post
+    text=res_dict['data']['text']
+KeyError: 'text'
+[E 190329 00:38:47.443 tornado.application:1788] Uncaught exception POST / (192.168.3.68)
+HTTPServerRequest(protocol='http', host='192.168.3.51:8322', method='POST', uri='/', version='HTTP/1.1', remote_ip='192.168.3.68')
+Traceback (most recent call last):
+  File "/home/wangjinyu/.pyenv/versions/sp_py3/lib/python3.6/site-packages/tornado/web.py", line 1697, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/wangjinyu/workproject/long_audio_asr/tencent/callback_url_blog.py", line 63, in post
+    self.write(callback)
+  File "/home/wangjinyu/.pyenv/versions/sp_py3/lib/python3.6/site-packages/tornado/web.py", line 836, in write
+    chunk = escape.json_encode(chunk)
+  File "/home/wangjinyu/.pyenv/versions/sp_py3/lib/python3.6/site-packages/tornado/escape.py", line 75, in json_encode
+    return json.dumps(value).replace("</", "<\\/")
+  File "/home/wangjinyu/.pyenv/versions/3.6.5/lib/python3.6/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/home/wangjinyu/.pyenv/versions/3.6.5/lib/python3.6/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/home/wangjinyu/.pyenv/versions/3.6.5/lib/python3.6/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/wangjinyu/.pyenv/versions/3.6.5/lib/python3.6/json/encoder.py", line 180, in default
+    o.__class__.__name__)
+TypeError: Object of type 'KeyError' is not JSON serializable
+[E 190329 00:38:47.447 tornado.access:2246] 500 POST / (192.168.3.68) 4.91ms
+[D 190329 00:38:58.273 __main__:53] res_dict:{'ret': 0, 'msg': 'ok', 'data': {'task_id': '1112_1511877399115', 'text': 'result_text'}}
+[I 190329 00:38:58.274 tornado.access:2246] 200 POST / (192.168.3.68) 1.30ms
+[D 190329 00:39:32.552 asyncio:65] Using selector: EpollSelector
+[D 190329 00:39:38.758 __main__:53] res_dict:{'ret': 0, 'msg': 'ok', 'data': {'task_id': '1112_1511877399115', 'text': 'result_text'}}
+[I 190329 00:39:38.759 tornado.access:2246] 200 POST / (192.168.3.68) 2.15ms
+[E 190329 00:39:53.440 tornado.application:1788] Uncaught exception POST / (192.168.3.68)
+HTTPServerRequest(protocol='http', host='192.168.3.51:8322', method='POST', uri='/', version='HTTP/1.1', remote_ip='192.168.3.68')
+Traceback (most recent call last):
+  File "/home/wangjinyu/.pyenv/versions/sp_py3/lib/python3.6/site-packages/tornado/web.py", line 1697, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/wangjinyu/workproject/long_audio_asr/tencent/callback_url_blog.py", line 63, in post
+    self.write(callback)
+  File "/home/wangjinyu/.pyenv/versions/sp_py3/lib/python3.6/site-packages/tornado/web.py", line 836, in write
+    chunk = escape.json_encode(chunk)
+  File "/home/wangjinyu/.pyenv/versions/sp_py3/lib/python3.6/site-packages/tornado/escape.py", line 75, in json_encode
+    return json.dumps(value).replace("</", "<\\/")
+  File "/home/wangjinyu/.pyenv/versions/3.6.5/lib/python3.6/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/home/wangjinyu/.pyenv/versions/3.6.5/lib/python3.6/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/home/wangjinyu/.pyenv/versions/3.6.5/lib/python3.6/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/wangjinyu/.pyenv/versions/3.6.5/lib/python3.6/json/encoder.py", line 180, in default
+    o.__class__.__name__)
+TypeError: Object of type 'KeyError' is not JSON serializable
+[E 190329 00:39:53.442 tornado.access:2246] 500 POST / (192.168.3.68) 2.35ms
+[D 190329 00:40:56.516 asyncio:65] Using selector: EpollSelector
+[E 190329 00:41:03.149 tornado.application:1788] Uncaught exception POST / (192.168.3.68)
+HTTPServerRequest(protocol='http', host='192.168.3.51:8322', method='POST', uri='/', version='HTTP/1.1', remote_ip='192.168.3.68')
+Traceback (most recent call last):
+  File "/home/wangjinyu/workproject/long_audio_asr/tencent/callback_url_blog.py", line 47, in post
+    text=res_dict['data']['text']
+KeyError: 'data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/wangjinyu/.pyenv/versions/sp_py3/lib/python3.6/site-packages/tornado/web.py", line 1697, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/wangjinyu/workproject/long_audio_asr/tencent/callback_url_blog.py", line 51, in post
+    callback['msg'] = e
+NameError: name 'e' is not defined
+[E 190329 00:41:03.151 tornado.access:2246] 500 POST / (192.168.3.68) 2.76ms
+[E 190329 00:41:03.890 tornado.application:1788] Uncaught exception POST / (192.168.3.68)
+HTTPServerRequest(protocol='http', host='192.168.3.51:8322', method='POST', uri='/', version='HTTP/1.1', remote_ip='192.168.3.68')
+Traceback (most recent call last):
+  File "/home/wangjinyu/workproject/long_audio_asr/tencent/callback_url_blog.py", line 47, in post
+    text=res_dict['data']['text']
+KeyError: 'data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/wangjinyu/.pyenv/versions/sp_py3/lib/python3.6/site-packages/tornado/web.py", line 1697, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/wangjinyu/workproject/long_audio_asr/tencent/callback_url_blog.py", line 51, in post
+    callback['msg'] = e
+NameError: name 'e' is not defined
+[E 190329 00:41:03.892 tornado.access:2246] 500 POST / (192.168.3.68) 1.53ms
+[D 190329 00:41:48.812 asyncio:65] Using selector: EpollSelector
+[I 190329 00:41:52.491 tornado.access:2246] 200 POST / (192.168.3.68) 0.77ms
+[D 190329 00:42:22.530 asyncio:65] Using selector: EpollSelector
+[E 190329 00:42:26.300 tornado.application:1788] Uncaught exception POST / (192.168.3.68)
+HTTPServerRequest(protocol='http', host='192.168.3.51:8322', method='POST', uri='/', version='HTTP/1.1', remote_ip='192.168.3.68')
+Traceback (most recent call last):
+  File "/home/wangjinyu/.pyenv/versions/sp_py3/lib/python3.6/site-packages/tornado/web.py", line 1697, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/wangjinyu/workproject/long_audio_asr/tencent/callback_url_blog.py", line 63, in post
+    self.write(callback)
+  File "/home/wangjinyu/.pyenv/versions/sp_py3/lib/python3.6/site-packages/tornado/web.py", line 836, in write
+    chunk = escape.json_encode(chunk)
+  File "/home/wangjinyu/.pyenv/versions/sp_py3/lib/python3.6/site-packages/tornado/escape.py", line 75, in json_encode
+    return json.dumps(value).replace("</", "<\\/")
+  File "/home/wangjinyu/.pyenv/versions/3.6.5/lib/python3.6/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/home/wangjinyu/.pyenv/versions/3.6.5/lib/python3.6/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/home/wangjinyu/.pyenv/versions/3.6.5/lib/python3.6/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/wangjinyu/.pyenv/versions/3.6.5/lib/python3.6/json/encoder.py", line 180, in default
+    o.__class__.__name__)
+TypeError: Object of type 'KeyError' is not JSON serializable
+[E 190329 00:42:26.303 tornado.access:2246] 500 POST / (192.168.3.68) 3.50ms
+[D 190329 00:43:24.735 asyncio:65] Using selector: EpollSelector
+[E 190329 00:43:29.256 __main__:49] get_result_fail
+Traceback (most recent call last):
+  File "/home/wangjinyu/workproject/long_audio_asr/tencent/callback_url_blog.py", line 47, in post
+    text=res_dict['data']['text']
+KeyError: 'data'
+[E 190329 00:43:29.257 tornado.application:1788] Uncaught exception POST / (192.168.3.68)
+HTTPServerRequest(protocol='http', host='192.168.3.51:8322', method='POST', uri='/', version='HTTP/1.1', remote_ip='192.168.3.68')
+Traceback (most recent call last):
+  File "/home/wangjinyu/workproject/long_audio_asr/tencent/callback_url_blog.py", line 47, in post
+    text=res_dict['data']['text']
+KeyError: 'data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/wangjinyu/.pyenv/versions/sp_py3/lib/python3.6/site-packages/tornado/web.py", line 1697, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/wangjinyu/workproject/long_audio_asr/tencent/callback_url_blog.py", line 51, in post
+    callback['msg'] = e
+NameError: name 'e' is not defined
+[E 190329 00:43:29.258 tornado.access:2246] 500 POST / (192.168.3.68) 2.20ms
+[E 190329 00:43:41.900 __main__:49] get_result_fail
+Traceback (most recent call last):
+  File "/home/wangjinyu/workproject/long_audio_asr/tencent/callback_url_blog.py", line 47, in post
+    text=res_dict['data']['text']
+KeyError: 'data'
+[E 190329 00:43:41.900 tornado.application:1788] Uncaught exception POST / (192.168.3.68)
+HTTPServerRequest(protocol='http', host='192.168.3.51:8322', method='POST', uri='/', version='HTTP/1.1', remote_ip='192.168.3.68')
+Traceback (most recent call last):
+  File "/home/wangjinyu/workproject/long_audio_asr/tencent/callback_url_blog.py", line 47, in post
+    text=res_dict['data']['text']
+KeyError: 'data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/wangjinyu/.pyenv/versions/sp_py3/lib/python3.6/site-packages/tornado/web.py", line 1697, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/wangjinyu/workproject/long_audio_asr/tencent/callback_url_blog.py", line 51, in post
+    callback['msg'] = e
+NameError: name 'e' is not defined
+[E 190329 00:43:41.901 tornado.access:2246] 500 POST / (192.168.3.68) 1.94ms
+[D 190329 00:43:46.559 asyncio:65] Using selector: EpollSelector
+[E 190329 00:43:49.000 __main__:49] get_result_fail
+Traceback (most recent call last):
+  File "/home/wangjinyu/workproject/long_audio_asr/tencent/callback_url_blog.py", line 47, in post
+    text=res_dict['data']['text']
+KeyError: 'data'
+[I 190329 00:43:49.001 tornado.access:2246] 200 POST / (192.168.3.68) 1.19ms
+[D 190329 00:46:22.218 asyncio:65] Using selector: EpollSelector
+[E 190329 00:46:26.139 __main__:49] get_result_fail
+Traceback (most recent call last):
+  File "/home/wangjinyu/workproject/long_audio_asr/tencent/callback_url_blog.py", line 47, in post
+    text=res_dict['data']['text']
+KeyError: 'data'
+[I 190329 00:46:26.140 tornado.access:2246] 200 POST / (192.168.3.68) 1.27ms
+[D 190329 00:46:46.181 asyncio:65] Using selector: EpollSelector
+[E 190329 00:46:50.224 __main__:49] get_result_fail
+Traceback (most recent call last):
+  File "/home/wangjinyu/workproject/long_audio_asr/tencent/callback_url_blog.py", line 47, in post
+    text=res_dict['data']['text']
+KeyError: 'data'
+[I 190329 00:46:50.225 tornado.access:2246] 200 POST / (192.168.3.68) 1.70ms
+[D 190329 00:47:07.426 asyncio:65] Using selector: EpollSelector
+[E 190329 00:47:10.937 __main__:49] get_result_fail
+Traceback (most recent call last):
+  File "/home/wangjinyu/workproject/long_audio_asr/tencent/callback_url_blog.py", line 47, in post
+    text=res_dict['data']['text']
+KeyError: 'data'
+[E 190329 00:47:10.938 tornado.application:1788] Uncaught exception POST / (192.168.3.68)
+HTTPServerRequest(protocol='http', host='192.168.3.51:8322', method='POST', uri='/', version='HTTP/1.1', remote_ip='192.168.3.68')
+Traceback (most recent call last):
+  File "/home/wangjinyu/.pyenv/versions/sp_py3/lib/python3.6/site-packages/tornado/web.py", line 1697, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/wangjinyu/workproject/long_audio_asr/tencent/callback_url_blog.py", line 63, in post
+    self.write(callback)
+  File "/home/wangjinyu/.pyenv/versions/sp_py3/lib/python3.6/site-packages/tornado/web.py", line 836, in write
+    chunk = escape.json_encode(chunk)
+  File "/home/wangjinyu/.pyenv/versions/sp_py3/lib/python3.6/site-packages/tornado/escape.py", line 75, in json_encode
+    return json.dumps(value).replace("</", "<\\/")
+  File "/home/wangjinyu/.pyenv/versions/3.6.5/lib/python3.6/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/home/wangjinyu/.pyenv/versions/3.6.5/lib/python3.6/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/home/wangjinyu/.pyenv/versions/3.6.5/lib/python3.6/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/wangjinyu/.pyenv/versions/3.6.5/lib/python3.6/json/encoder.py", line 180, in default
+    o.__class__.__name__)
+TypeError: Object of type 'KeyError' is not JSON serializable
+[E 190329 00:47:10.942 tornado.access:2246] 500 POST / (192.168.3.68) 4.71ms
+[D 190329 00:47:20.593 asyncio:65] Using selector: EpollSelector
+[E 190329 00:47:23.342 __main__:49] get_result_fail
+Traceback (most recent call last):
+  File "/home/wangjinyu/workproject/long_audio_asr/tencent/callback_url_blog.py", line 47, in post
+    text=res_dict['data']['text']
+KeyError: 'data'
+[I 190329 00:47:23.343 tornado.access:2246] 200 POST / (192.168.3.68) 1.29ms
+[D 190329 00:47:53.918 asyncio:65] Using selector: EpollSelector
+[E 190329 00:47:56.297 __main__:49] get_result_fail
+Traceback (most recent call last):
+  File "/home/wangjinyu/workproject/long_audio_asr/tencent/callback_url_blog.py", line 47, in post
+    text=res_dict['data']['text']
+KeyError: 'data'
+[I 190329 00:47:56.298 tornado.access:2246] 200 POST / (192.168.3.68) 1.87ms
+[D 190329 00:48:21.434 asyncio:65] Using selector: EpollSelector
+[I 190329 00:48:24.216 tornado.access:2246] 200 POST / (192.168.3.68) 0.83ms
+[D 190329 00:49:03.724 asyncio:65] Using selector: EpollSelector
+[D 190329 00:49:06.497 __main__:51] get_result_fail KeyError('data',)
+[I 190329 00:49:06.497 tornado.access:2246] 200 POST / (192.168.3.68) 1.31ms
+[D 190329 00:49:22.395 asyncio:65] Using selector: EpollSelector
+[D 190329 00:49:27.733 __main__:51] get_result_fail KeyError('data',)
+[I 190329 00:49:27.734 tornado.access:2246] 200 POST / (192.168.3.68) 1.73ms
+[D 190329 00:50:07.154 asyncio:65] Using selector: EpollSelector
+[D 190329 00:50:10.809 __main__:51] get_result_fail KeyError('data',)
+[I 190329 00:50:10.810 tornado.access:2246] 200 POST / (192.168.3.68) 1.25ms
+[D 190329 00:50:34.694 __main__:51] get_result_fail KeyError('data',)
+[I 190329 00:50:34.695 tornado.access:2246] 200 POST / (192.168.3.68) 1.27ms
+[D 190329 00:51:10.441 asyncio:65] Using selector: EpollSelector
+[E 190329 00:51:15.775 __main__:49] get_result_fail
+Traceback (most recent call last):
+  File "/home/wangjinyu/workproject/long_audio_asr/tencent/callback_url_blog.py", line 47, in post
+    text=res_dict['data']['text']
+KeyError: 'data'
+[I 190329 00:51:15.776 tornado.access:2246] 200 POST / (192.168.3.68) 1.35ms
+[D 190329 00:58:11.273 asyncio:65] Using selector: EpollSelector
+[D 190329 01:01:03.132 asyncio:65] Using selector: EpollSelector
+[E 190329 01:01:25.970 __main__:49] get_result_fail
+Traceback (most recent call last):
+  File "/home/wangjinyu/workproject/long_audio_asr/tencent/callback_url_blog.py", line 47, in post
+    text=res_dict['data']['text']
+KeyError: 'data'
+[I 190329 01:01:25.970 tornado.access:2246] 200 POST / (192.168.3.68) 1.23ms
+[D 190329 01:01:37.890 __main__:54] res_dict:{'ret': 0, 'msg': 'ok', 'data': {'task_id': '1112_1511877399115', 'text': 'result_text'}}
+[I 190329 01:01:37.891 tornado.access:2246] 200 POST / (192.168.3.68) 1.11ms
+[D 190329 09:37:23.178 asyncio:65] Using selector: EpollSelector
+[D 190329 09:39:10.460 asyncio:65] Using selector: EpollSelector
+[D 190329 09:44:33.400 asyncio:65] Using selector: EpollSelector
+[D 190329 09:46:09.513 __main__:56] res_dict:{'ret': 0, 'msg': 'ok', 'data': {'task_id': '1112_1511877399115', 'text': 'result_text'}}
+[I 190329 09:46:09.514 tornado.access:2246] 200 POST / (192.168.8.108) 1.70ms
+[D 190329 09:46:26.598 __main__:50] <class 'KeyError'>
+[E 190329 09:46:26.599 __main__:51] get_result_fail
+Traceback (most recent call last):
+  File "/home/wangjinyu/workproject/long_audio_asr/tencent/callback_url.py", line 48, in post
+    text=res_dict['data']['text']
+KeyError: 'data'
+[I 190329 09:46:26.599 tornado.access:2246] 200 POST / (192.168.8.108) 1.15ms
+[D 190329 10:46:31.695 __main__:50] <class 'KeyError'>
+[E 190329 10:46:31.695 __main__:51] get_result_fail
+Traceback (most recent call last):
+  File "/home/wangjinyu/workproject/long_audio_asr/tencent/callback_url.py", line 48, in post
+    text=res_dict['data']['text']
+KeyError: 'data'
+[I 190329 10:46:31.696 tornado.access:2246] 200 POST / (::1) 1.42ms
+[D 190329 10:47:43.113 __main__:56] res_dict:{'ret': 0, 'msg': 'ok', 'data': {'task_id': '1112_1511877399115', 'text': 'result_text'}}
+[I 190329 10:47:43.114 tornado.access:2246] 200 POST / (::1) 1.36ms
+[D 190329 14:51:59.775 urllib3.connectionpool:813] Starting new HTTPS connection (1): api.ai.qq.com:443
+[D 190329 14:51:59.775 urllib3.connectionpool:813] Starting new HTTPS connection (1): api.ai.qq.com:443
+[D 190329 14:52:37.742 __main__:137] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_3.wav'
+[D 190329 14:52:37.742 __main__:137] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_3.wav'
+[D 190329 14:52:38.262 urllib3.connectionpool:813] Starting new HTTPS connection (1): api.ai.qq.com:443
+[D 190329 14:52:38.262 urllib3.connectionpool:813] Starting new HTTPS connection (1): api.ai.qq.com:443
+[D 190329 14:53:23.970 urllib3.connectionpool:393] https://api.ai.qq.com:443 "POST /fcgi-bin/aai/aai_wxasrlong HTTP/1.1" 200 None
+[D 190329 14:53:23.970 urllib3.connectionpool:393] https://api.ai.qq.com:443 "POST /fcgi-bin/aai/aai_wxasrlong HTTP/1.1" 200 None
+[D 190329 14:53:23.972 __main__:102] task_id:'1032249_1553842403706'
+[D 190329 14:53:23.972 __main__:102] task_id:'1032249_1553842403706'
+[D 190329 14:53:23.972 __main__:105] wav_time:68
+[D 190329 14:53:23.972 __main__:105] wav_time:68
+[D 190329 14:53:23.972 __main__:137] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_4.wav'
+[D 190329 14:53:23.972 __main__:137] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_4.wav'
+[D 190329 14:53:24.296 urllib3.connectionpool:813] Starting new HTTPS connection (1): api.ai.qq.com:443
+[D 190329 14:53:24.296 urllib3.connectionpool:813] Starting new HTTPS connection (1): api.ai.qq.com:443
+[D 190329 14:56:30.517 __main__:137] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_3.wav'
+[D 190329 14:56:30.517 __main__:137] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_3.wav'
+[D 190329 14:56:30.908 urllib3.connectionpool:813] Starting new HTTPS connection (1): api.ai.qq.com:443
+[D 190329 14:56:30.908 urllib3.connectionpool:813] Starting new HTTPS connection (1): api.ai.qq.com:443
+[D 190329 14:57:32.787 client:137] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_3.wav'
+[D 190329 14:57:33.121 urllib3.connectionpool:813] Starting new HTTPS connection (1): api.ai.qq.com:443
+[D 190329 14:58:14.553 urllib3.connectionpool:393] https://api.ai.qq.com:443 "POST /fcgi-bin/aai/aai_wxasrlong HTTP/1.1" 200 None
+[D 190329 14:58:14.555 client:102] task_id:'1032521_1553842694307'
+[D 190329 14:58:14.556 client:105] wav_time:68
+[D 190329 14:58:14.556 client:137] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_4.wav'
+[D 190329 14:58:14.860 urllib3.connectionpool:813] Starting new HTTPS connection (1): api.ai.qq.com:443
+[D 190329 14:58:56.827 urllib3.connectionpool:393] https://api.ai.qq.com:443 "POST /fcgi-bin/aai/aai_wxasrlong HTTP/1.1" 200 None
+[D 190329 14:58:56.831 client:102] task_id:'1030680_1553842736518'
+[D 190329 14:58:56.831 client:105] wav_time:68
+[D 190329 14:58:56.832 client:137] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_9.wav'
+[D 190329 14:58:57.127 urllib3.connectionpool:813] Starting new HTTPS connection (1): api.ai.qq.com:443
+[D 190329 14:59:08.110 client:137] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_3.wav'
+[D 190329 14:59:09.304 client:137] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_3.wav'
+[D 190329 14:59:09.611 urllib3.connectionpool:813] Starting new HTTPS connection (1): api.ai.qq.com:443
+[D 190329 14:59:36.130 client:137] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_3.wav'
+[D 190329 14:59:36.475 urllib3.connectionpool:813] Starting new HTTPS connection (1): api.ai.qq.com:443
+[D 190329 15:00:59.046 client:137] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_3.wav'
+[D 190329 15:00:59.360 urllib3.connectionpool:813] Starting new HTTPS connection (1): api.ai.qq.com:443
+[D 190329 15:01:40.510 urllib3.connectionpool:393] https://api.ai.qq.com:443 "POST /fcgi-bin/aai/aai_wxasrlong HTTP/1.1" 200 None
+[D 190329 15:01:40.514 client:102] task_id:'1032522_1553842900256'
+[D 190329 15:01:40.515 client:105] wav_time:68
+[D 190329 15:01:40.515 client:137] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_4.wav'
+[D 190329 15:01:40.786 urllib3.connectionpool:813] Starting new HTTPS connection (1): api.ai.qq.com:443
+[D 190329 15:02:24.667 urllib3.connectionpool:393] https://api.ai.qq.com:443 "POST /fcgi-bin/aai/aai_wxasrlong HTTP/1.1" 200 None
+[D 190329 15:02:24.670 client:102] task_id:'1032168_1553842944387'
+[D 190329 15:02:24.671 client:105] wav_time:68
+[D 190329 15:02:24.671 client:137] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_9.wav'
+[D 190329 15:02:24.951 urllib3.connectionpool:813] Starting new HTTPS connection (1): api.ai.qq.com:443
+[D 190329 15:03:07.402 urllib3.connectionpool:393] https://api.ai.qq.com:443 "POST /fcgi-bin/aai/aai_wxasrlong HTTP/1.1" 200 None
+[D 190329 15:03:07.404 client:102] task_id:'1032068_1553842987146'
+[D 190329 15:03:07.404 client:105] wav_time:69
+[D 190329 15:03:07.404 client:137] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_0.wav'
+[D 190329 15:03:07.844 urllib3.connectionpool:813] Starting new HTTPS connection (1): api.ai.qq.com:443
+[D 190329 15:03:49.618 urllib3.connectionpool:393] https://api.ai.qq.com:443 "POST /fcgi-bin/aai/aai_wxasrlong HTTP/1.1" 200 None
+[D 190329 15:03:49.622 client:102] task_id:'1032169_1553843029351'
+[D 190329 15:03:49.622 client:105] wav_time:68
+[D 190329 15:03:49.622 client:137] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_7.wav'
+[D 190329 15:03:49.926 urllib3.connectionpool:813] Starting new HTTPS connection (1): api.ai.qq.com:443
+[D 190329 15:04:32.234 urllib3.connectionpool:393] https://api.ai.qq.com:443 "POST /fcgi-bin/aai/aai_wxasrlong HTTP/1.1" 200 None
+[D 190329 15:04:32.237 client:102] task_id:'1031961_1553843071939'
+[D 190329 15:04:32.237 client:105] wav_time:69
+[D 190329 15:04:32.238 client:137] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_6.wav'
+[D 190329 15:04:32.550 urllib3.connectionpool:813] Starting new HTTPS connection (1): api.ai.qq.com:443
+[D 190329 15:05:14.732 urllib3.connectionpool:393] https://api.ai.qq.com:443 "POST /fcgi-bin/aai/aai_wxasrlong HTTP/1.1" 200 None
+[D 190329 15:05:14.735 client:102] task_id:'1032318_1553843114437'
+[D 190329 15:05:14.735 client:105] wav_time:69
+[D 190329 15:05:14.735 client:137] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_1.wav'
+[D 190329 15:05:15.027 urllib3.connectionpool:813] Starting new HTTPS connection (1): api.ai.qq.com:443
+[D 190329 15:05:58.634 urllib3.connectionpool:393] https://api.ai.qq.com:443 "POST /fcgi-bin/aai/aai_wxasrlong HTTP/1.1" 200 None
+[D 190329 15:05:58.638 client:102] task_id:'1032523_1553843158343'
+[D 190329 15:05:58.639 client:105] wav_time:68
+[D 190329 15:05:58.639 client:137] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_8.wav'
+[D 190329 15:05:58.927 urllib3.connectionpool:813] Starting new HTTPS connection (1): api.ai.qq.com:443
+[D 190329 15:06:41.304 urllib3.connectionpool:393] https://api.ai.qq.com:443 "POST /fcgi-bin/aai/aai_wxasrlong HTTP/1.1" 200 None
+[D 190329 15:06:41.306 client:102] task_id:'1032525_1553843201032'
+[D 190329 15:06:41.306 client:105] wav_time:69
+[D 190329 15:06:41.306 client:137] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_2.wav'
+[D 190329 15:06:41.626 urllib3.connectionpool:813] Starting new HTTPS connection (1): api.ai.qq.com:443
+[D 190329 15:07:24.564 urllib3.connectionpool:393] https://api.ai.qq.com:443 "POST /fcgi-bin/aai/aai_wxasrlong HTTP/1.1" 200 None
+[D 190329 15:07:24.566 client:102] task_id:'1032252_1553843244291'
+[D 190329 15:07:24.567 client:105] wav_time:68
+[D 190329 15:07:24.567 client:137] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_5.wav'
+[D 190329 15:07:24.894 urllib3.connectionpool:813] Starting new HTTPS connection (1): api.ai.qq.com:443
+[D 190329 15:08:08.317 urllib3.connectionpool:393] https://api.ai.qq.com:443 "POST /fcgi-bin/aai/aai_wxasrlong HTTP/1.1" 200 None
+[D 190329 15:08:08.320 client:102] task_id:'1030682_1553843288007'
+[D 190329 15:08:08.321 client:105] wav_time:69
+[D 190329 15:17:49.751 client:137] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_0.wav'
+[D 190329 15:18:07.082 client:102] task_id:'1032254_1553843886928'
+[D 190329 15:18:07.082 client:105] wav_time:25
+[D 190329 15:18:07.082 client:137] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_8.wav'
+[D 190329 15:18:25.631 client:102] task_id:'1030769_1553843905426'
+[D 190329 15:18:25.632 client:105] wav_time:27
+[D 190329 15:18:25.632 client:137] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_16.wav'
+[D 190329 15:18:42.825 client:102] task_id:'1031551_1553843922663'
+[D 190329 15:18:42.825 client:105] wav_time:25
+[D 190329 15:18:42.826 client:137] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_14.wav'
+[D 190329 15:19:00.838 client:102] task_id:'1031443_1553843940636'
+[D 190329 15:19:00.838 client:105] wav_time:26
+[D 190329 15:19:00.838 client:137] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_5.wav'
+[D 190329 15:19:21.757 client:102] task_id:'1031552_1553843961474'
+[D 190329 15:19:21.757 client:105] wav_time:26
+[D 190329 15:19:21.758 client:137] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_18.wav'
+[D 190329 15:19:41.023 client:102] task_id:'1032170_1553843980867'
+[D 190329 15:19:41.023 client:105] wav_time:25
+[D 190329 15:19:41.023 client:137] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_29.wav'
+[D 190329 15:20:00.181 client:102] task_id:'1031444_1553843999957'
+[D 190329 15:20:00.181 client:105] wav_time:28
+[D 190329 15:20:00.182 client:137] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_27.wav'
+[D 190329 15:20:19.999 client:102] task_id:'1031962_1553844019811'
+[D 190329 15:20:20.000 client:105] wav_time:25
+[D 190329 15:20:20.000 client:137] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_2.wav'
+[D 190329 15:20:39.305 client:102] task_id:'1032255_1553844039135'
+[D 190329 15:20:39.306 client:105] wav_time:28
+[D 190329 15:20:39.306 client:137] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_26.wav'
+[D 190329 15:20:59.721 client:102] task_id:'1032615_1553844059549'
+[D 190329 15:20:59.722 client:105] wav_time:27
+[D 190329 15:20:59.722 client:137] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_6.wav'
+[D 190329 15:21:20.839 client:102] task_id:'1030683_1553844080619'
+[D 190329 15:21:20.839 client:105] wav_time:27
+[D 190329 15:25:05.916 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_0.wav'
+[D 190329 15:25:26.081 client:105] task_id:'1032419_1553844325862'
+[D 190329 15:25:26.082 client:108] wav_time:25
+[D 190329 15:25:26.082 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_8.wav'
+[D 190329 15:25:48.727 client:105] task_id:'1031445_1553844348492'
+[D 190329 15:25:48.727 client:108] wav_time:27
+[D 190329 15:25:48.728 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_16.wav'
+[D 190329 15:26:08.143 client:105] task_id:'1031884_1553844367921'
+[D 190329 15:26:08.144 client:108] wav_time:25
+[D 190329 15:26:08.145 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_14.wav'
+[D 190329 15:26:30.447 client:105] task_id:'1031759_1553844390144'
+[D 190329 15:26:30.447 client:108] wav_time:26
+[D 190329 15:26:30.447 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_5.wav'
+[D 190329 15:26:50.769 client:105] task_id:'1029978_1553844410466'
+[D 190329 15:26:50.769 client:108] wav_time:26
+[D 190329 15:26:50.769 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_18.wav'
+[D 190329 15:27:10.309 client:105] task_id:'1032531_1553844430147'
+[D 190329 15:27:10.309 client:108] wav_time:25
+[D 190329 15:27:10.309 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_29.wav'
+[D 190329 15:27:33.759 client:105] task_id:'1031392_1553844453502'
+[D 190329 15:27:33.760 client:108] wav_time:28
+[D 190329 15:27:33.760 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_27.wav'
+[D 190329 15:27:55.664 client:105] task_id:'1031645_1553844475403'
+[D 190329 15:27:55.664 client:108] wav_time:25
+[D 190329 15:27:55.665 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_2.wav'
+[D 190329 15:28:07.803 asyncio:53] Using selector: EpollSelector
+[D 190329 15:28:18.848 client:105] task_id:'1031963_1553844498633'
+[D 190329 15:28:18.849 client:108] wav_time:28
+[D 190329 15:28:18.850 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_26.wav'
+[D 190329 15:28:41.149 client:105] task_id:'1032320_1553844520979'
+[D 190329 15:28:41.150 client:108] wav_time:27
+[D 190329 15:29:15.038 __main__:57] res_dict:{'ret': 0, 'data': {'text': 'result_text', 'task_id': '1112_1511877399115'}, 'msg': 'ok'}
+[I 190329 15:29:15.040 tornado.access:2246] 200 POST / (::1) 3.52ms
+[D 190329 15:29:24.879 __main__:50] <class 'KeyError'>
+[E 190329 15:29:24.879 __main__:51] get_result_fail
+Traceback (most recent call last):
+  File "/home/wangjinyu/workproject/long_audio_asr/tencent/callback_url.py", line 48, in post
+    text=res_dict['data']['text']
+KeyError: 'data'
+[D 190329 15:29:24.880 root:52] <class 'str'>
+[I 190329 15:29:24.880 tornado.access:2246] 200 POST / (::1) 1.04ms
+[D 190329 15:32:25.586 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_6.wav'
+[D 190329 15:32:46.479 client:105] task_id:'1032069_1553844766325'
+[D 190329 15:32:46.480 client:108] wav_time:27
+[D 190329 15:32:46.480 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_20.wav'
+[D 190329 15:33:07.160 client:105] task_id:'1029979_1553844786926'
+[D 190329 15:33:07.160 client:108] wav_time:28
+[D 190329 15:33:07.160 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_4.wav'
+[D 190329 15:33:27.856 client:105] task_id:'1032617_1553844807647'
+[D 190329 15:33:27.857 client:108] wav_time:27
+[D 190329 15:33:27.857 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_7.wav'
+[D 190329 15:33:48.185 client:105] task_id:'1030960_1553844827986'
+[D 190329 15:33:48.186 client:108] wav_time:25
+[D 190329 15:33:48.186 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_11.wav'
+[D 190329 15:34:09.903 client:105] task_id:'1030684_1553844849730'
+[D 190329 15:34:09.904 client:108] wav_time:28
+[D 190329 15:34:09.904 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_21.wav'
+[D 190329 15:34:29.900 client:105] task_id:'1030961_1553844869681'
+[D 190329 15:34:29.900 client:108] wav_time:26
+[D 190329 15:34:29.900 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_28.wav'
+[D 190329 15:34:50.980 client:105] task_id:'1032256_1553844890772'
+[D 190329 15:34:50.980 client:108] wav_time:27
+[D 190329 15:34:50.981 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_9.wav'
+[D 190329 15:35:10.733 client:105] task_id:'1032532_1553844910552'
+[D 190329 15:35:10.734 client:108] wav_time:25
+[D 190329 15:35:10.734 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_15.wav'
+[D 190329 15:35:31.406 client:105] task_id:'1031395_1553844931230'
+[D 190329 15:35:31.407 client:108] wav_time:27
+[D 190329 15:35:31.408 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_13.wav'
+[D 190329 15:35:53.453 client:105] task_id:'1030962_1553844953227'
+[D 190329 15:35:53.454 client:108] wav_time:27
+[D 190329 15:58:21.569 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_3.wav'
+[D 190329 15:58:46.111 client:105] task_id:'1031553_1553846325811'
+[D 190329 15:58:46.111 client:108] wav_time:68
+[D 190329 15:58:46.112 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_4.wav'
+[D 190329 15:59:06.277 client:105] task_id:'1029981_1553846345959'
+[D 190329 15:59:06.277 client:108] wav_time:68
+[D 190329 15:59:06.277 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_9.wav'
+[D 190329 15:59:23.293 client:105] task_id:'1030963_1553846362977'
+[D 190329 15:59:23.293 client:108] wav_time:69
+[D 190329 15:59:23.293 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_0.wav'
+[D 190329 15:59:37.600 client:105] task_id:'1032072_1553846377098'
+[D 190329 15:59:37.600 client:108] wav_time:68
+[D 190329 15:59:37.601 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_7.wav'
+[D 190329 16:00:03.505 client:105] task_id:'1031968_1553846399500'
+[D 190329 16:00:03.505 client:108] wav_time:69
+[D 190329 16:00:03.505 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_6.wav'
+[D 190329 16:00:28.405 client:105] task_id:'1032173_1553846428108'
+[D 190329 16:00:28.406 client:108] wav_time:69
+[D 190329 16:00:28.406 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_1.wav'
+[D 190329 16:00:39.245 client:105] task_id:'1032535_1553846438946'
+[D 190329 16:00:39.246 client:108] wav_time:68
+[D 190329 16:00:39.246 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_8.wav'
+[D 190329 16:00:50.203 client:105] task_id:'1031889_1553846449977'
+[D 190329 16:00:50.203 client:108] wav_time:69
+[D 190329 16:00:50.203 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_2.wav'
+[D 190329 16:01:03.221 client:105] task_id:'1032422_1553846462991'
+[D 190329 16:01:03.222 client:108] wav_time:68
+[D 190329 16:01:03.222 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_5.wav'
+[D 190329 16:01:13.649 client:105] task_id:'1029982_1553846473243'
+[D 190329 16:01:13.649 client:108] wav_time:69
+[D 190329 16:16:02.291 asyncio:53] Using selector: EpollSelector
+[D 190329 16:22:11.687 __main__:79] 监听端口:8322
+[D 190329 16:22:11.687 asyncio:53] Using selector: EpollSelector
+[D 190329 16:22:44.710 __main__:59] res_dict:{'ret': 0, 'data': {'task_id': '1112_1511877399115', 'text': 'result_text'}, 'msg': 'ok'}
+[I 190329 16:22:44.710 tornado.access:2246] 200 POST / (::1) 1.06ms
+[D 190329 16:23:07.783 asyncio:53] Using selector: EpollSelector
+[D 190329 16:23:07.784 __main__:79] 监听端口:8323
+[I 190329 16:23:31.286 tornado.general:202] /home/wangjinyu/workproject/long_audio_asr/tencent/callback_url.py modified; restarting server
+[D 190329 16:23:31.445 asyncio:53] Using selector: EpollSelector
+[D 190329 16:23:31.447 __main__:79] 监听端口:8322
+[D 190329 16:23:33.195 __main__:59] res_dict:{'msg': 'ok', 'ret': 0, 'data': {'text': 'result_text', 'task_id': '1112_1511877399115'}}
+[I 190329 16:23:33.195 tornado.access:2246] 200 POST / (::1) 0.98ms
+[I 190329 16:25:14.449 tornado.general:202] /home/wangjinyu/workproject/long_audio_asr/tencent/callback_url.py modified; restarting server
+[D 190329 16:25:14.678 asyncio:53] Using selector: EpollSelector
+[D 190329 16:25:14.682 __main__:79] 监听端口:8322
+[W 190329 16:25:16.220 tornado.access:2246] 404 POST / (::1) 3.13ms
+[W 190329 16:25:37.239 tornado.access:2246] 404 POST /test/ (::1) 0.63ms
+[D 190329 16:25:42.401 __main__:52] <class 'KeyError'>
+[E 190329 16:25:42.401 __main__:53] get_result_fail
+Traceback (most recent call last):
+  File "/home/wangjinyu/workproject/long_audio_asr/tencent/callback_url.py", line 50, in post
+    text=res_dict['data']['text']
+KeyError: 'data'
+[D 190329 16:25:42.402 root:54] <class 'str'>
+[I 190329 16:25:42.402 tornado.access:2246] 200 POST /test (::1) 1.20ms
+[D 190329 16:25:57.478 __main__:52] <class 'KeyError'>
+[E 190329 16:25:57.479 __main__:53] get_result_fail
+Traceback (most recent call last):
+  File "/home/wangjinyu/workproject/long_audio_asr/tencent/callback_url.py", line 50, in post
+    text=res_dict['data']['text']
+KeyError: 'data'
+[D 190329 16:25:57.479 root:54] <class 'str'>
+[I 190329 16:25:57.479 tornado.access:2246] 200 POST /test (::1) 1.04ms
+[D 190329 16:26:04.222 __main__:59] res_dict:{'msg': 'ok', 'data': {'task_id': '1112_1511877399115', 'text': 'result_text'}, 'ret': 0}
+[I 190329 16:26:04.223 tornado.access:2246] 200 POST /test (::1) 1.59ms
+[D 190329 16:32:56.627 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_3.wav'
+[D 190329 16:33:13.237 client:105] task_id:'1032331_1553848392937'
+[D 190329 16:33:13.238 client:108] wav_time:68
+[D 190329 16:33:13.238 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_4.wav'
+[D 190329 16:33:33.725 client:105] task_id:'1032425_1553848413503'
+[D 190329 16:33:33.725 client:108] wav_time:68
+[D 190329 16:33:33.725 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_9.wav'
+[D 190329 16:33:47.441 client:105] task_id:'1030687_1553848426248'
+[D 190329 16:33:47.441 client:108] wav_time:69
+[D 190329 16:33:47.442 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_0.wav'
+[D 190329 16:34:01.608 client:105] task_id:'1030774_1553848441323'
+[D 190329 16:34:01.609 client:108] wav_time:68
+[D 190329 16:34:01.609 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_7.wav'
+[D 190329 16:34:15.909 client:105] task_id:'1031892_1553848455644'
+[D 190329 16:34:15.909 client:108] wav_time:69
+[D 190329 16:34:15.909 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_6.wav'
+[D 190329 16:34:31.370 client:105] task_id:'1031973_1553848471067'
+[D 190329 16:34:31.371 client:108] wav_time:69
+[D 190329 16:34:31.371 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_1.wav'
+[D 190329 16:34:46.968 client:105] task_id:'1031893_1553848486743'
+[D 190329 16:34:46.969 client:108] wav_time:68
+[D 190329 16:34:46.969 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_8.wav'
+[D 190329 16:35:00.760 client:105] task_id:'1030688_1553848500486'
+[D 190329 16:35:00.761 client:108] wav_time:69
+[D 190329 16:35:00.761 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_2.wav'
+[D 190329 16:35:14.793 client:105] task_id:'1031447_1553848514539'
+[D 190329 16:35:14.793 client:108] wav_time:68
+[D 190329 16:35:14.793 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_5.wav'
+[D 190329 16:36:41.423 client:105] task_id:'1032075_1553848600890'
+[D 190329 16:36:41.424 client:108] wav_time:69
+[D 190329 17:44:59.315 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_3.wav'
+[D 190329 17:45:11.366 client:105] task_id:'1032264_1553852711076'
+[D 190329 17:45:11.366 client:108] wav_time:68
+[D 190329 17:45:11.366 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_4.wav'
+[D 190329 17:45:24.780 client:105] task_id:'1032429_1553852724472'
+[D 190329 17:45:24.781 client:108] wav_time:68
+[D 190329 17:45:24.781 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_9.wav'
+[D 190329 17:45:37.591 client:105] task_id:'1032265_1553852737372'
+[D 190329 17:45:37.591 client:108] wav_time:69
+[D 190329 17:45:37.591 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_0.wav'
+[D 190329 17:45:49.256 client:105] task_id:'1032430_1553852748951'
+[D 190329 17:45:49.256 client:108] wav_time:68
+[D 190329 17:45:49.257 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_7.wav'
+[D 190329 17:46:03.388 client:105] task_id:'1032266_1553852763089'
+[D 190329 17:46:03.388 client:108] wav_time:69
+[D 190329 17:46:03.388 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_6.wav'
+[D 190329 17:46:17.753 client:105] task_id:'1032543_1553852777515'
+[D 190329 17:46:17.753 client:108] wav_time:69
+[D 190329 17:46:17.753 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_1.wav'
+[D 190329 17:46:31.453 client:105] task_id:'1032179_1553852791223'
+[D 190329 17:46:31.454 client:108] wav_time:68
+[D 190329 17:46:31.454 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_8.wav'
+[D 190329 17:46:47.753 client:105] task_id:'1032180_1553852807529'
+[D 190329 17:46:47.753 client:108] wav_time:69
+[D 190329 17:46:47.754 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_2.wav'
+[D 190329 17:47:05.353 client:105] task_id:'1030689_1553852825092'
+[D 190329 17:47:05.353 client:108] wav_time:68
+[D 190329 17:47:05.354 client:140] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/one_minute/60s_5.wav'
+[D 190329 17:47:23.874 client:105] task_id:'1032545_1553852843624'
+[D 190329 17:47:23.874 client:108] wav_time:69
+[D 190329 17:49:48.272 client:105] task_id:'1031979_1553852988084'
+[D 190329 17:49:48.273 client:108] wav_time:25
+[D 190329 17:51:22.415 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_0.wav'
+[D 190329 17:51:44.284 client:105] task_id:'1031563_1553853104078'
+[D 190329 17:51:44.285 client:108] wav_time:25
+[D 190329 17:51:44.285 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_8.wav'
+[D 190329 17:51:55.242 client:105] task_id:'1032629_1553853115088'
+[D 190329 17:51:55.243 client:108] wav_time:27
+[D 190329 17:51:55.243 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_16.wav'
+[D 190329 17:52:06.095 client:105] task_id:'1031897_1553853125960'
+[D 190329 17:52:06.095 client:108] wav_time:25
+[D 190329 17:52:06.096 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_14.wav'
+[D 190329 17:52:16.061 client:105] task_id:'1030971_1553853135911'
+[D 190329 17:52:16.061 client:108] wav_time:26
+[D 190329 17:52:16.061 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_5.wav'
+[D 190329 17:52:26.698 client:105] task_id:'1032080_1553853146584'
+[D 190329 17:52:26.698 client:108] wav_time:26
+[D 190329 17:52:26.698 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_18.wav'
+[D 190329 17:52:36.611 client:105] task_id:'1032338_1553853156431'
+[D 190329 17:52:36.611 client:108] wav_time:25
+[D 190329 17:52:36.611 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_29.wav'
+[D 190329 17:52:49.208 client:105] task_id:'1031452_1553853168905'
+[D 190329 17:52:49.211 client:108] wav_time:28
+[D 190329 17:52:49.212 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_27.wav'
+[D 190329 17:53:11.632 client:105] task_id:'1032903_1553853191481'
+[D 190329 17:53:11.633 client:108] wav_time:25
+[D 190329 18:01:15.868 client:105] task_id:'1032432_1553853675669'
+[D 190329 18:01:15.868 client:108] wav_time:25
+[D 190329 18:01:56.698 client:105] task_id:'1030776_1553853716536'
+[D 190329 18:01:56.699 client:108] wav_time:25
+[D 190329 18:03:07.329 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_6.wav'
+[D 190329 18:03:47.609 client:105] task_id:'1032183_1553853827176'
+[D 190329 18:03:47.609 client:108] wav_time:27
+[D 190329 18:03:47.609 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_20.wav'
+[D 190329 18:05:16.466 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_6.wav'
+[D 190329 18:05:36.363 client:105] task_id:'1031649_1553853936242'
+[D 190329 18:05:36.364 client:108] wav_time:27
+[D 190329 18:05:36.364 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_20.wav'
+[D 190329 18:06:01.404 client:105] task_id:'1032547_1553853961072'
+[D 190329 18:06:01.405 client:108] wav_time:28
+[D 190329 18:06:01.405 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_4.wav'
+[D 190329 18:06:41.550 client:105] task_id:'1032703_1553854001306'
+[D 190329 18:06:41.551 client:108] wav_time:27
+[D 190329 18:06:41.551 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_7.wav'
+[D 190329 18:07:08.275 client:105] task_id:'1030777_1553854028149'
+[D 190329 18:07:08.276 client:108] wav_time:25
+[D 190329 18:07:08.276 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_11.wav'
+[D 190329 18:07:32.124 client:105] task_id:'1032549_1553854051986'
+[D 190329 18:07:32.125 client:108] wav_time:28
+[D 190329 18:07:32.126 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_21.wav'
+[D 190329 18:07:56.241 client:105] task_id:'1032704_1553854076092'
+[D 190329 18:07:56.242 client:108] wav_time:26
+[D 190329 18:07:56.243 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_28.wav'
+[D 190329 18:08:13.774 client:105] task_id:'1032184_1553854093662'
+[D 190329 18:08:13.775 client:108] wav_time:27
+[D 190329 18:08:13.775 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_9.wav'
+[D 190329 18:08:31.819 client:105] task_id:'1032434_1553854111700'
+[D 190329 18:08:31.819 client:108] wav_time:25
+[D 190329 18:08:31.819 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_15.wav'
+[D 190329 18:08:49.561 client:105] task_id:'1032269_1553854128860'
+[D 190329 18:08:49.562 client:108] wav_time:27
+[D 190329 18:08:49.562 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_13.wav'
+[D 190329 18:09:05.268 client:105] task_id:'1032435_1553854145107'
+[D 190329 18:09:05.269 client:108] wav_time:27
+[D 190329 18:11:33.545 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_6.wav'
+[D 190329 18:11:52.581 client:105] task_id:'1030778_1553854312461'
+[D 190329 18:11:52.581 client:108] wav_time:27
+[D 190329 18:11:52.582 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_20.wav'
+[D 190329 18:12:11.605 client:105] task_id:'1032081_1553854331476'
+[D 190329 18:12:11.605 client:108] wav_time:28
+[D 190329 18:12:11.606 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_4.wav'
+[D 190329 18:12:33.867 client:105] task_id:'1032186_1553854353746'
+[D 190329 18:12:33.867 client:108] wav_time:27
+[D 190329 18:12:33.867 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_7.wav'
+[D 190329 18:12:50.109 client:105] task_id:'1032436_1553854369968'
+[D 190329 18:12:50.110 client:108] wav_time:25
+[D 190329 18:12:50.110 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_11.wav'
+[D 190329 18:13:06.243 client:105] task_id:'1029988_1553854386063'
+[D 190329 18:13:06.243 client:108] wav_time:28
+[D 190329 18:13:06.244 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_21.wav'
+[D 190329 18:13:24.078 client:105] task_id:'1032630_1553854403946'
+[D 190329 18:13:24.078 client:108] wav_time:26
+[D 190329 18:13:24.078 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_28.wav'
+[D 190329 18:13:44.505 client:105] task_id:'1030972_1553854424332'
+[D 190329 18:13:44.505 client:108] wav_time:27
+[D 190329 18:13:44.505 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_9.wav'
+[D 190329 18:14:11.823 client:105] task_id:'1032808_1553854449858'
+[D 190329 18:14:11.824 client:108] wav_time:25
+[D 190329 18:14:11.824 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_15.wav'
+[D 190329 18:14:27.432 client:105] task_id:'1030692_1553854467311'
+[D 190329 18:14:27.433 client:108] wav_time:27
+[D 190329 18:14:27.434 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_13.wav'
+[D 190329 18:14:44.282 client:105] task_id:'1032551_1553854484157'
+[D 190329 18:14:44.282 client:108] wav_time:27
+[D 190329 18:20:44.725 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_6.wav'
+[D 190329 18:21:00.428 client:105] task_id:'1030693_1553854860294'
+[D 190329 18:21:00.429 client:108] wav_time:27
+[D 190329 18:21:00.429 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_20.wav'
+[D 190329 18:21:18.977 client:105] task_id:'1032437_1553854878839'
+[D 190329 18:21:18.978 client:108] wav_time:28
+[D 190329 18:21:18.978 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_4.wav'
+[D 190329 18:21:37.318 client:105] task_id:'1033001_1553854897181'
+[D 190329 18:21:37.318 client:108] wav_time:27
+[D 190329 18:21:37.319 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_7.wav'
+[D 190329 18:21:55.680 client:105] task_id:'1031981_1553854915550'
+[D 190329 18:21:55.681 client:108] wav_time:25
+[D 190329 18:21:55.681 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_11.wav'
+[D 190329 18:22:14.307 client:105] task_id:'1032188_1553854934167'
+[D 190329 18:22:14.308 client:108] wav_time:28
+[D 190329 18:22:14.308 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_21.wav'
+[D 190329 18:22:31.931 client:105] task_id:'1031982_1553854951806'
+[D 190329 18:22:31.932 client:108] wav_time:26
+[D 190329 18:22:31.932 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_28.wav'
+[D 190329 18:22:51.285 client:105] task_id:'1032809_1553854971154'
+[D 190329 18:22:51.286 client:108] wav_time:27
+[D 190329 18:22:51.286 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_9.wav'
+[D 190329 18:23:28.012 client:105] task_id:'1032439_1553854994660'
+[D 190329 18:23:28.013 client:108] wav_time:25
+[D 190329 18:23:28.013 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_15.wav'
+[D 190329 18:23:45.950 client:105] task_id:'1030694_1553855025752'
+[D 190329 18:23:45.950 client:108] wav_time:27
+[D 190329 18:23:45.950 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_13.wav'
+[D 190329 18:24:03.269 client:105] task_id:'1030973_1553855043125'
+[D 190329 18:24:03.269 client:108] wav_time:27
+[D 190330 14:08:51.204 client:105] task_id:'1033471_1553926131091'
+[D 190330 14:08:51.208 client:108] wav_time:26
+[D 190330 14:10:37.998 client:105] task_id:'1034003_1553926237899'
+[D 190330 14:10:37.999 client:108] wav_time:26
+[D 190330 14:14:15.208 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_6.wav'
+[D 190330 14:14:26.791 client:105] task_id:'1031796_1553926466595'
+[D 190330 14:14:26.791 client:108] wav_time:27
+[D 190330 14:14:26.791 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_20.wav'
+[D 190330 14:14:38.875 client:105] task_id:'1034004_1553926478670'
+[D 190330 14:14:38.876 client:108] wav_time:28
+[D 190330 14:14:38.876 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_4.wav'
+[D 190330 14:14:50.448 client:105] task_id:'1032736_1553926490156'
+[D 190330 14:14:50.449 client:108] wav_time:27
+[D 190330 14:14:50.449 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_7.wav'
+[D 190330 14:15:02.058 client:105] task_id:'1033472_1553926501957'
+[D 190330 14:15:02.059 client:108] wav_time:25
+[D 190330 14:15:02.059 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_11.wav'
+[D 190330 14:15:13.452 client:105] task_id:'1031595_1553926513283'
+[D 190330 14:15:13.453 client:108] wav_time:28
+[D 190330 14:15:13.453 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_21.wav'
+[D 190330 14:15:25.093 client:105] task_id:'1034005_1553926524977'
+[D 190330 14:15:25.094 client:108] wav_time:26
+[D 190330 14:15:25.094 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_28.wav'
+[D 190330 14:15:36.928 client:105] task_id:'1032497_1553926536736'
+[D 190330 14:15:36.929 client:108] wav_time:27
+[D 190330 14:15:36.929 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_9.wav'
+[D 190330 14:15:48.672 client:105] task_id:'1033260_1553926548569'
+[D 190330 14:15:48.672 client:108] wav_time:25
+[D 190330 14:15:48.672 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_15.wav'
+[D 190330 14:16:00.322 client:105] task_id:'1032737_1553926560196'
+[D 190330 14:16:00.322 client:108] wav_time:27
+[D 190330 14:16:00.323 client:143] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_13.wav'
+[D 190330 14:16:11.895 client:105] task_id:'1033518_1553926571744'
+[D 190330 14:16:11.895 client:108] wav_time:27
+[D 190330 16:23:33.607 asyncio:53] Using selector: EpollSelector
+[D 190330 16:23:55.051 asyncio:53] Using selector: EpollSelector
+[D 190330 16:23:55.056 __main__:79] 监听端口:8322
+[W 190330 16:24:04.562 tornado.access:2246] 404 GET / (::1) 4.83ms
+[W 190330 16:24:11.818 tornado.access:2246] 404 POST / (::1) 1.24ms
+[D 190330 16:24:31.896 asyncio:53] Using selector: EpollSelector
+[D 190330 16:24:31.899 __main__:79] 监听端口:8322
+[W 190330 16:24:40.576 tornado.access:2246] 404 POST / (::1) 3.79ms
+[W 190330 16:25:30.807 tornado.access:2246] 404 POST / (::1) 1.24ms
+[W 190330 16:25:54.374 tornado.access:2246] 404 POST / (::1) 1.16ms
+[D 190330 16:26:12.237 asyncio:53] Using selector: EpollSelector
+[D 190330 16:26:12.240 __main__:79] 监听端口:8322
+[W 190330 16:27:10.785 tornado.access:2246] 404 POST / (::1) 2.94ms
+[W 190330 16:27:27.563 tornado.access:2246] 404 POST / (::1) 1.38ms
+[D 190330 16:28:07.946 asyncio:53] Using selector: EpollSelector
+[D 190330 16:28:07.948 __main__:79] 监听端口:8322
+[W 190330 16:28:28.592 tornado.access:2246] 404 POST / (::1) 2.19ms
+[W 190330 16:29:13.440 tornado.access:2246] 404 POST / (192.168.3.51) 1.27ms
+[D 190330 16:29:39.767 asyncio:53] Using selector: EpollSelector
+[D 190330 16:29:39.770 __main__:79] 监听端口:8322
+[D 190330 16:30:44.740 asyncio:53] Using selector: EpollSelector
+[D 190330 16:30:44.742 __main__:79] 监听端口:8322
+[D 190330 16:30:50.944 __main__:52] <class 'json.decoder.JSONDecodeError'>
+[E 190330 16:30:50.946 __main__:53] get_result_fail
+Traceback (most recent call last):
+  File "/home/wangjinyu/workproject/long_audio_asr/tencent/callback_url.py", line 49, in post
+    res_dict=json.loads(response.decode('utf-8'))
+  File "/usr/lib/python3.5/json/__init__.py", line 319, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.5/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.5/json/decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting ',' delimiter: line 6 column 9 (char 71)
+[D 190330 16:30:50.949 root:54] <class 'str'>
+[I 190330 16:30:50.950 tornado.access:2246] 200 POST / (::1) 8.11ms
+[D 190330 16:31:34.223 __main__:59] res_dict:{'data': {'text': 'test', 'task_id': '1112_1511877399115'}, 'msg': 'ok', 'ret': 0}
+[I 190330 16:31:34.241 tornado.access:2246] 200 POST / (::1) 18.73ms
+[D 190401 15:18:54.944 client:105] task_id:'1033893_1554103134664'
+[D 190401 15:18:54.948 client:108] wav_time:26
+[D 190401 15:22:38.479 client:105] task_id:'1033894_1554103358256'
+[D 190401 15:22:38.480 client:108] wav_time:26
+[D 190401 15:23:43.740 client:105] task_id:'1036422_1554103423527'
+[D 190401 15:23:43.741 client:108] wav_time:28
+[D 190401 15:24:27.837 client:105] task_id:'1036220_1554103467673'
+[D 190401 15:24:27.837 client:108] wav_time:26
+[D 190401 15:26:58.747 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_0.wav'
+[D 190401 15:27:26.270 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_0.wav'
+[D 190401 15:27:46.115 client:105] task_id:'1036051_1554103665977'
+[D 190401 15:27:46.116 client:108] wav_time:25
+[D 190401 15:28:46.173 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_8.wav'
+[D 190401 15:29:08.495 client:105] task_id:'1036800_1554103748351'
+[D 190401 15:29:08.496 client:108] wav_time:27
+[D 190401 15:33:58.416 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_0.wav'
+[D 190401 15:34:25.412 client:105] task_id:'1035837_1554104065234'
+[D 190401 15:34:25.412 client:108] wav_time:25
+[D 190401 15:35:25.464 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_8.wav'
+[D 190401 15:35:45.441 client:105] task_id:'1036802_1554104145274'
+[D 190401 15:35:45.441 client:108] wav_time:27
+[D 190401 15:36:45.493 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_16.wav'
+[D 190401 15:37:07.026 client:105] task_id:'1036803_1554104226825'
+[D 190401 15:37:07.026 client:108] wav_time:25
+[D 190401 15:38:07.085 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_14.wav'
+[D 190401 15:38:51.378 client:105] task_id:'1036052_1554104331343'
+[D 190401 15:38:51.378 client:108] wav_time:26
+[D 190401 15:39:51.379 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_5.wav'
+[D 190401 15:40:18.223 client:105] task_id:'1036507_1554104418104'
+[D 190401 15:40:18.223 client:108] wav_time:26
+[D 190401 15:41:18.251 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_18.wav'
+[D 190401 15:41:37.070 client:105] task_id:'1033896_1554104496884'
+[D 190401 15:41:37.071 client:108] wav_time:25
+[D 190401 15:42:37.077 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_29.wav'
+[D 190401 15:43:00.562 client:105] task_id:'1036425_1554104580316'
+[D 190401 15:43:00.563 client:108] wav_time:28
+[D 190401 15:44:00.608 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_27.wav'
+[D 190401 15:44:21.313 client:105] task_id:'1035960_1554104661097'
+[D 190401 15:44:21.313 client:108] wav_time:25
+[D 190401 15:45:21.373 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_2.wav'
+[D 190401 15:45:42.562 client:105] task_id:'1036704_1554104742278'
+[D 190401 15:45:42.563 client:108] wav_time:28
+[D 190401 15:46:42.594 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_26.wav'
+[D 190401 15:47:07.127 client:105] task_id:'1034981_1554104826835'
+[D 190401 15:47:07.127 client:108] wav_time:27
+[D 190401 15:52:15.334 client:105] task_id:'1034669_1554105135127'
+[D 190401 15:52:15.335 client:108] wav_time:25
+[D 190401 15:53:46.988 client:105] task_id:'1035840_1554105226793'
+[D 190401 15:53:46.988 client:108] wav_time:28
+[D 190401 16:02:34.523 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_0.wav'
+[D 190401 16:03:39.373 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_0.wav'
+[D 190401 16:04:01.098 client:105] task_id:'1033898_1554105840894'
+[D 190401 16:04:01.099 client:108] wav_time:25
+[D 190401 16:06:01.182 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_8.wav'
+[D 190401 16:06:38.528 client:105] task_id:'1034982_1554105998335'
+[D 190401 16:06:38.529 client:108] wav_time:27
+[D 190401 16:08:38.630 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_16.wav'
+[D 190401 16:09:02.907 client:105] task_id:'1036509_1554106142706'
+[D 190401 16:09:02.907 client:108] wav_time:25
+[D 190401 16:11:02.996 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_14.wav'
+[D 190401 16:12:17.122 client:105] task_id:'1033899_1554106336880'
+[D 190401 16:12:17.123 client:108] wav_time:26
+[D 190401 16:14:17.218 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_5.wav'
+[D 190401 16:17:53.960 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_0.wav'
+[D 190401 16:17:58.493 client:105] task_id:'1034381_1554106678283'
+[D 190401 16:17:58.493 client:108] wav_time:25
+[D 190401 16:19:58.592 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_8.wav'
+[D 190401 16:20:04.861 client:105] task_id:'1036222_1554106804610'
+[D 190401 16:20:04.861 client:108] wav_time:27
+[D 190401 16:22:53.291 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_0.wav'
+[D 190401 16:23:10.458 client:105] task_id:'1036807_1554106990243'
+[D 190401 16:23:10.458 client:108] wav_time:25
+[D 190401 16:25:10.547 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_8.wav'
+[D 190401 16:25:27.801 client:102] 上传音频失败:{'ret': -2147483634, 'data': {'task_id': ''}, 'msg': 'system busy, please try again later'}
+[D 190401 16:27:27.902 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_16.wav'
+[D 190401 16:27:45.937 client:105] task_id:'1036808_1554107265649'
+[D 190401 16:27:45.938 client:108] wav_time:25
+[D 190401 16:29:46.038 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_14.wav'
+[D 190401 16:30:04.688 client:102] 上传音频失败:{'ret': -2147483634, 'data': {'task_id': ''}, 'msg': 'system busy, please try again later'}
+[D 190401 16:32:04.787 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_5.wav'
+[D 190401 16:32:22.836 client:105] task_id:'1034984_1554107542552'
+[D 190401 16:32:22.836 client:108] wav_time:26
+[D 190401 16:34:22.891 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_18.wav'
+[D 190401 16:34:41.391 client:105] task_id:'1035561_1554107681166'
+[D 190401 16:34:41.392 client:108] wav_time:25
+[D 190401 16:36:10.049 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_0.wav'
+[D 190401 16:36:27.178 client:105] task_id:'1036427_1554107786947'
+[D 190401 16:36:27.178 client:108] wav_time:25
+[D 190401 16:38:27.277 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_8.wav'
+[D 190401 16:39:17.192 client:105] task_id:'1036615_1554107956958'
+[D 190401 16:39:17.193 client:108] wav_time:27
+[D 190401 16:41:17.267 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_16.wav'
+[D 190401 16:41:36.652 client:105] task_id:'1036616_1554108096353'
+[D 190401 16:41:36.653 client:108] wav_time:25
+[D 190401 16:43:36.753 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_14.wav'
+[D 190401 16:43:54.799 client:105] task_id:'1035962_1554108234517'
+[D 190401 16:43:54.800 client:108] wav_time:26
+[D 190401 16:45:54.900 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_5.wav'
+[D 190401 16:46:12.129 client:105] task_id:'1036341_1554108371839'
+[D 190401 16:46:12.129 client:108] wav_time:26
+[D 190401 16:48:12.226 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_18.wav'
+[D 190401 16:48:29.253 client:105] task_id:'1036122_1554108508895'
+[D 190401 16:48:29.254 client:108] wav_time:25
+[D 190401 16:50:29.266 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_29.wav'
+[D 190401 16:50:47.933 client:105] task_id:'1036056_1554108647647'
+[D 190401 16:50:47.933 client:108] wav_time:28
+[D 190401 16:52:48.034 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_27.wav'
+[D 190401 16:53:05.236 client:105] task_id:'1035564_1554108784963'
+[D 190401 16:53:05.236 client:108] wav_time:25
+[D 190401 16:55:05.330 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_2.wav'
+[D 190401 16:55:23.959 client:105] task_id:'1036343_1554108923637'
+[D 190401 16:55:23.959 client:108] wav_time:28
+[D 190401 16:57:24.027 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_26.wav'
+[D 190401 16:57:45.185 client:105] task_id:'1035786_1554109064922'
+[D 190401 16:57:45.185 client:108] wav_time:27
+[D 190401 22:04:14.444 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_0.wav'
+[D 190401 22:04:17.530 client:105] task_id:'1034679_1554127457444'
+[D 190401 22:04:17.531 client:108] wav_time:25
+[D 190401 22:06:17.626 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_8.wav'
+[D 190401 22:06:22.429 client:105] task_id:'1034993_1554127582249'
+[D 190401 22:06:22.430 client:108] wav_time:27
+[D 190401 22:08:22.524 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_16.wav'
+[D 190401 22:08:25.056 client:105] task_id:'1035856_1554127704593'
+[D 190401 22:08:25.057 client:108] wav_time:25
+[D 190401 22:10:25.089 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_14.wav'
+[D 190401 22:10:29.326 client:105] task_id:'1037202_1554127829253'
+[D 190401 22:10:29.327 client:108] wav_time:26
+[D 190401 22:12:29.422 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_5.wav'
+[D 190401 22:12:33.114 client:105] task_id:'1035686_1554127952695'
+[D 190401 22:12:33.115 client:108] wav_time:26
+[D 190401 22:14:33.200 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_18.wav'
+[D 190401 22:14:36.009 client:105] task_id:'1037109_1554128075934'
+[D 190401 22:14:36.010 client:108] wav_time:25
+[D 190401 22:16:36.051 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_29.wav'
+[D 190401 22:16:38.330 client:105] task_id:'1036230_1554128198159'
+[D 190401 22:16:38.331 client:108] wav_time:28
+[D 190401 22:18:38.332 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_27.wav'
+[D 190401 22:18:41.442 client:105] task_id:'1036822_1554128321336'
+[D 190401 22:18:41.443 client:108] wav_time:25
+[D 190401 22:20:41.536 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_2.wav'
+[D 190401 22:20:43.957 client:105] task_id:'1036076_1554128443875'
+[D 190401 22:20:43.958 client:108] wav_time:28
+[D 190401 22:22:44.023 client:145] 音频路径:'/home/wangjinyu/workproject/long_audio_asr/res/middle_wav/wav_25s_26.wav'
+[D 190401 22:22:48.425 client:105] task_id:'1037204_1554128568349'
+[D 190401 22:22:48.426 client:108] wav_time:27

@@ -1,0 +1,33 @@
+Metadata-Version: 1.1
+Name: yitu-speech-python-sdk
+Version: 0.1.0
+Summary: Yitu Long speech SDK
+Home-page: speech.yitutech.com
+Author: Yitu
+Author-email: UNKNOWN
+License: Apache License 2.0
+Description: ======================
+        yitu-speech-python-sdk
+        ======================
+        
+        This is the module of Yitu Speech Python SDK for long audio.
+        
+        Installation
+        pip install -r requirements.txt
+        
+        Documentation:
+        Please visit http://speech.yitutech.com/devdoc/longaudio/create
+        
+Keywords: yitu,sdk,speech
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries
